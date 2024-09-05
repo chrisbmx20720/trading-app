@@ -1,0 +1,148 @@
+<div class="wallet-container">
+  <div class="row">
+    <div class="user-info">
+      <table class="table table-bordered table-striped">
+        <thead class="thead-light">
+          <tr>
+            <th>ID</th>
+            <th>Full Name</th>
+            <th>Location</th>
+            <th>Junior Account</th>
+            <th>Introduced by</th>
+            <th>Fecha de ingreso</th>
+            <th>Fecha de corte</th>
+            <th>Próximo corte</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{ userId | titlecase }}</td>
+            <td>{{ username | titlecase }}</td>
+           
+            <td>{{ userLocation | titlecase }}</td>
+            <td>{{ accountNumber | titlecase }}</td>
+            <td>Rempired Lited</td>
+            <td>
+              <input type="date" value="2018-01-15" disabled class="form-control-plaintext" />
+            </td>
+            <td>
+              <input type="date" value="2018-04-15" disabled class="form-control-plaintext" />
+            </td>
+            <td>
+              <input type="date" value="2018-01-15" disabled class="form-control-plaintext" />
+            </td>
+            
+          </tr>
+        
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="row bg-light">
+    <div class="sidebar">
+      <ul class="menu">
+        <li (click)="setView('bitcoin')" [class.active]="currentView === 'bitcoin'">
+          <i class="fab fa-bitcoin"></i> Bitcoin (BTC)
+        </li>
+        <li (click)="setView('ethereum')" [class.active]="currentView === 'ethereum'">
+          <i class="fab fa-ethereum"></i> Ethereum (ETH)
+        </li>
+        <li (click)="setView('gold')" [class.active]="currentView === 'gold'">
+          <i class="fa-solid fa-coins"></i> Gold
+        </li>
+        <li (click)="setView('binance')" [class.active]="currentView === 'binance'">
+          <i class="fab fa-btc"></i> Binance (BNB)
+        </li>
+      </ul>
+    </div>
+  
+    <!-- Columna Derecha: Vista Dinámica -->
+    <div class="coins-content">
+      <div *ngIf="currentView">
+        <h3 class="coin-title
+        ">{{ currentView | titlecase }}</h3>
+        <table class="table table-borderless">
+          <tbody>
+            <tr>
+              <td><strong>Hedge Fund Investment:</strong></td>
+              <td>{{ hedgeFundInvestment | currency }}</td>
+            </tr>
+            <tr>
+              <td><strong>Bonificat:</strong></td>
+              <td>{{ bonificat | currency }}</td>
+            </tr>
+            <tr>
+              <td><strong>Hedge Protection Insurance:</strong></td>
+              <td>{{ hedgeProtectionInsurance | currency }}</td>
+            </tr>
+            <tr>
+              <td><strong>Opt Quantity:</strong></td>
+              <td>{{ optQuantity }}</td>
+            </tr>
+            <tr>
+              <td><strong>Strike Price:</strong></td>
+              <td>{{ strikePrice | currency }}</td>
+            </tr>
+            <tr>
+              <td><strong>Expiration Date:</strong></td>
+              <td>{{ expirationDate }}</td>
+            </tr>
+            <tr>
+              <td><strong>Earnings:</strong></td>
+              <td>{{ earnings | currency }}</td>
+            </tr>
+          </tbody>
+        </table>
+  
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="container">
+      <div class="table-responsive">
+        <table class="table table-bordered">
+          <thead class="thead-light">
+            <tr>
+              <th>Enero</th>
+              <th>Febrero</th>
+              <th>Marzo</th>
+              <th>Abril</th>
+              <th>Mayo</th>
+              <th>Junio</th>
+              <th>Julio</th>
+              <th>Agosto</th>
+              <th>Setiembre</th>
+              <th>Octubre</th>
+              <th>Noviembre</th>
+              <th>Diciembre</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    
+    
+    
+  
+  </div>
+  
+</div>

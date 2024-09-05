@@ -1,0 +1,25 @@
+<div class="user-dashboard">
+  
+  <div class="sidebar">
+    {{username}}
+    <ul class="menu">
+      <li routerLink="/dashboard/home" routerLinkActive="active">
+        <i class="fas fa-home"></i> Home
+      </li>
+      <li routerLink="/dashboard/wallet" routerLinkActive="active">
+        <i class="fa-solid fa-wallet"></i> Wallet
+      </li>
+    </ul>
+  </div>
+
+ 
+  
+  <div class="content">
+
+    <div class="div">
+      <app-indices></app-indices>
+    </div>
+
+    <router-outlet></router-outlet>
+  </div>
+</div>

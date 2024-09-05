@@ -1,0 +1,18 @@
+
+<div class="swiper">
+  <div class="indices-slider swiper-wrapper">
+    <div *ngFor="let index of indices" class="swiper swiper-slide">
+      <h4>{{ index.name }}</h4>
+      <div class="indices-container">
+        <p class="value">{{ index.value }}</p>
+        <p class="change">
+        <i class="fa" [ngClass]="index.change > 0 ? 'fa-arrow-up' : 'fa-arrow-down'"></i>
+        {{ index.change }}
+        </p>
+      </div>
+      
+    </div>
+  </div>
+</div>
+  
+

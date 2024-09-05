@@ -1,0 +1,44 @@
+.menu-container{
+    width: 35%;
+    display: flex;
+    flex-direction: row;
+}
+
+.bg-purple,.btn-primary{
+    background-color:transparent;
+    border-bottom: 1px solid #5353a1;
+}
+
+.bg-grey{
+    background-color: #f5f9fc;
+}
+
+.list-item{
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+    padding-left:10px;
+  }
+
+  .flexing{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 80%;
+    justify-content: flex-end;
+}
+.padding{
+    padding-right: 5%;
+}
+li {
+    list-style: none;
+    
+}
+
+a {
+    text-decoration: none;
+    color:#ced0d2;
+}

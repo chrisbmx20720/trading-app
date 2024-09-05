@@ -1,0 +1,231 @@
+un usuario tiene una wallet y una wallet tiene varias monedas.
+
+cada moneda tiene un porcentaje de cambio de subida o bajada 
+
+¡Hola! Para crear una aplicación en Angular que permita hacer login y luego acceder a la vista de usuario con la billetera y las monedas, necesitas varios componentes y archivos JSON para manejar la información. Aquí te explico cómo hacerlo:
+
+### Paso 1: Crear el archivo JSON
+
+Primero, necesitas un archivo JSON con la información de las monedas y la billetera. Guarda este archivo como `data.json` en una carpeta como `assets` en tu proyecto Angular.
+
+```json
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "usuario1",
+      "password": "contrasena1",
+      "wallet": {
+        "totalEquity": 10000,
+        "availableMargin": 5000,
+        "coins": [
+          { "name": "Bitcoin", "amount": 1.5 },
+          { "name": "Ethereum", "amount": 10 }
+        ]
+      }
+    }
+  ]
+}
+```
+
+### Paso 2: Configurar los componentes
+
+1. **Componente de Login**
+
+   - Crea un componente llamado `login`.
+
+     ```bash
+     ng generate component login
+     ```
+
+   - En `login.component.html`, crea un formulario simple:
+
+     ```html
+     <form (ngSubmit)="onLogin()">
+       <label for="username">Username:</label>
+       <input id="username" [(ngModel)]="username" name="username" required>
+       <label for="password">Password:</label>
+       <input id="password" [(ngModel)]="password" name="password" type="password" required>
+       <button type="submit">Login</button>
+     </form>
+     ```
+
+   - En `login.component.ts`, añade la lógica para el login:
+
+     ```typescript
+     import { Component } from '@angular/core';
+     import { Router } from '@angular/router';
+     import { HttpClient } from '@angular/common/http';
+
+     @Component({
+       selector: 'app-login',
+       templateUrl: './login.component.html',
+       styleUrls: ['./login.component.css']
+     })
+     export class LoginComponent {
+       username = '';
+       password = '';
+
+       constructor(private http: HttpClient, private router: Router) {}
+
+       onLogin() {
+         this.http.get('assets/data.json').subscribe((data: any) => {
+           const user = data.users.find((u: any) => u.username === this.username && u.password === this.password);
+           if (user) {
+             // Save user data to localStorage or service
+             localStorage.setItem('currentUser', JSON.stringify(user));
+             this.router.navigate(['/wallet']);
+           } else {
+             alert('Invalid credentials');
+           }
+         });
+       }
+     }
+     ```
+
+2. **Componente de Billetera**
+
+   - Crea un componente llamado `wallet`.
+
+     ```bash
+     ng generate component wallet
+     ```
+
+   - En `wallet.component.html`, muestra la información de la billetera:
+
+     ```html
+     <div *ngIf="wallet">
+       <h2>Billetera</h2>
+       <p>Total Equity: {{ wallet.totalEquity }}</p>
+       <p>Available Margin: {{ wallet.availableMargin }}</p>
+       <h3>Monedas</h3>
+       <ul>
+         <li *ngFor="let coin of wallet.coins">
+           {{ coin.name }}: {{ coin.amount }}
+         </li>
+       </ul>
+     </div>
+     ```
+
+   - En `wallet.component.ts`, carga los datos de la billetera:
+
+     ```typescript
+     import { Component, OnInit } from '@angular/core';
+
+     @Component({
+       selector: 'app-wallet',
+       templateUrl: './wallet.component.html',
+       styleUrls: ['./wallet.component.css']
+     })
+     export class WalletComponent implements OnInit {
+       wallet: any;
+
+       ngOnInit() {
+         const user = JSON.parse(localStorage.getItem('currentUser') || '{}');
+         this.wallet = user.wallet;
+       }
+     }
+     ```
+
+3. **Componente de Moneda**
+
+   - Crea un componente llamado `coin`.
+
+     ```bash
+     ng generate component coin
+     ```
+
+   - En `coin.component.html`, muestra detalles de una moneda (puedes modificarlo según tus necesidades):
+
+     ```html
+     <div *ngIf="coin">
+       <h2>{{ coin.name }}</h2>
+       <p>Amount: {{ coin.amount }}</p>
+     </div>
+     ```
+
+   - En `coin.component.ts`, carga detalles de la moneda:
+
+     ```typescript
+     import { Component, OnInit } from '@angular/core';
+     import { ActivatedRoute } from '@angular/router';
+
+     @Component({
+       selector: 'app-coin',
+       templateUrl: './coin.component.html',
+       styleUrls: ['./coin.component.css']
+     })
+     export class CoinComponent implements OnInit {
+       coin: any;
+
+       constructor(private route: ActivatedRoute) {}
+
+       ngOnInit() {
+         const coinName = this.route.snapshot.paramMap.get('name');
+         const user = JSON.parse(localStorage.getItem('currentUser') || '{}');
+         this.coin = user.wallet.coins.find((coin: any) => coin.name === coinName);
+       }
+     }
+     ```
+
+### Paso 3: Configurar las rutas
+
+En `app-routing.module.ts`, configura las rutas para los componentes:
+
+```typescript
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { LoginComponent } from './login/login.component';
+import { WalletComponent } from './wallet/wallet.component';
+import { CoinComponent } from './coin/coin.component';
+
+const routes: Routes = [
+  { path: 'login', component: LoginComponent },
+  { path: 'wallet', component: WalletComponent },
+  { path: 'coin/:name', component: CoinComponent },
+  { path: '', redirectTo: '/login', pathMatch: 'full' }
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
+```
+
+### Paso 4: Configurar el `AppModule`
+
+No olvides importar `FormsModule` y `HttpClientModule` en tu `app.module.ts`:
+
+```typescript
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { LoginComponent } from './login/login.component';
+import { WalletComponent } from './wallet/wallet.component';
+import { CoinComponent } from './coin/coin.component';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    WalletComponent,
+    CoinComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
+
+Con esto, tendrás un flujo básico para iniciar sesión, ver la billetera y consultar las monedas. ¡Espero que te sea útil! Si necesitas más detalles o ajustes, no dudes en preguntar.
+

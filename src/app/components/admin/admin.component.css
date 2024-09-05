@@ -1,0 +1,120 @@
+.user-dashboard {
+  display: flex;
+  max-width: 100%;
+  width:100%;
+  overflow-x: hidden;
+}
+
+.sidebar {
+  width: 10%;
+  background-color:transparent;
+  padding: 20px;
+  height: 100vh;
+  color: white;
+}
+
+.wallet-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.wallet-info i {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.wallet-amount {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.menu {
+  list-style-type: none;
+  padding: 0;
+}
+
+.menu li {
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.active {
+  background-color: #007bff; 
+  color:#ffffff;
+}
+
+
+.menu li i {
+  margin-right: 10px;
+ 
+}
+
+.menu li:hover {
+  background-color: #495057;
+ 
+  border-radius: 5px;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+.notification-bar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.notification-bar i {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.notification-bar .badge {
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  padding: 5px 10px;
+  top: -10px;
+  right: -10px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 90%;  
+}
+
+
+.stock-slider {
+  margin-top: 20px;
+}
+
+.stock-card {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.stock-card h4 {
+  margin: 0 0 5px 0;
+}
+
+.stock-card p {
+  margin: 0;
+}

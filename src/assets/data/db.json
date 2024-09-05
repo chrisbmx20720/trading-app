@@ -1,0 +1,630 @@
+{
+  "accountTypes": [
+    {
+      "id": "a001",
+      "name": "Vip",
+      "description": "Exclusive account with premium benefits and personalized service."
+    },
+    {
+      "id": "a002",
+      "name": "Junior",
+      "description": "Entry-level account for new investors with basic features."
+    },
+    {
+      "id": "a003",
+      "name": "Senior",
+      "description": "Account for experienced investors with advanced tools and services."
+    },
+    {
+      "id": "a004",
+      "name": "Corporate",
+      "description": "Business-focused account offering extensive resources for corporate clients."
+    }
+  ],
+  "users": [
+    {
+      "id": "b001",
+      "username": "admin",
+      "lastname": "Doe",
+      "name": "John",
+      "email": "johndoe@example.com",
+      "password": "123",
+      "walletId": "w001",
+      "country": "USA",
+      "province": "California",
+      "phone": "555-1234",
+      "accountTypeId": "a001",
+      "accountNumber": "1234567890"
+    },
+    {
+      "id": "b002",
+      "username": "janedoe",
+      "lastname": "Doe",
+      "name": "Jane",
+      "email": "janedoe@example.com",
+      "password": "securepass456",
+      "walletId": "w002",
+      "country": "Canada",
+      "province": "Ontario",
+      "phone": "555-5678",
+      "accountTypeId": "a002",
+      "accountNumber": "2345678901"
+    },
+    {
+      "id": "b003",
+      "username": "michaelsmith",
+      "lastname": "Smith",
+      "name": "Michael",
+      "email": "michaelsmith@example.com",
+      "password": "mike789",
+      "walletId": "w003",
+      "country": "UK",
+      "province": "London",
+      "phone": "555-9012",
+      "accountTypeId": "a003",
+      "accountNumber": "3456789012"
+    },
+    {
+      "id": "b004",
+      "username": "emilyjones",
+      "lastname": "Jones",
+      "name": "Emily",
+      "email": "emilyjones@example.com",
+      "password": "emilysecure321",
+      "walletId": "w004",
+      "country": "Australia",
+      "province": "New South Wales",
+      "phone": "555-3456",
+      "accountTypeId": "a004",
+      "accountNumber": "4567890123"
+    },
+    {
+      "id": "b00520",
+      "username": "cbmx",
+      "lastname": "Alvarez",
+      "name": "Christian",
+      "email": "c@gmail.com",
+      "password": "252525",
+      "walletId": "w000",
+      "country": "Costa Rica",
+      "province": "Puntarenas",
+      "phone": "71010101",
+      "accountTypeId": "a003",
+      "accountNumber": "52362849861896262"
+    },
+    {
+      "id": "b00563",
+      "username": "Lechu",
+      "lastname": "Alvarez",
+      "name": "Eidrian",
+      "email": "ed@gmail.com",
+      "password": "12345",
+      "walletId": "w003",
+      "country": "Costa Rica",
+      "province": "Puntarenas",
+      "phone": "71010101",
+      "accountTypeId": "a003",
+      "accountNumber": "6269599"
+    },
+    {
+      "id": "b00740",
+      "username": "darielcch",
+      "lastname": "Martinez",
+      "name": "Dariel",
+      "email": "d@fwd.com",
+      "password": "030303",
+      "walletId": "w000",
+      "country": "Costa Rica",
+      "province": "Puntarenas",
+      "phone": "71010101",
+      "accountTypeId": "a000",
+      "accountNumber": "564532349881ES"
+    },
+    {
+      "id": "b00895",
+      "username": "RacconNuet",
+      "lastname": "Gonzalez Fuentes",
+      "name": "Jose Daniel",
+      "email": "racconnuest@gmail.com",
+      "password": "josedani1234",
+      "walletId": "w005",
+      "country": "Costa Rica",
+      "province": "San Jose",
+      "phone": "78524169",
+      "accountTypeId": "a005",
+      "accountNumber": "564532349861ES"
+    },
+    {
+      "id": "b00602",
+      "username": "manuv",
+      "lastname": "Vargas",
+      "name": "Manuel",
+      "email": "manu@gmail.com",
+      "password": "010101",
+      "walletId": "w002",
+      "country": "USA",
+      "province": "DAKOTA",
+      "phone": "+1789456",
+      "accountTypeId": "a002",
+      "accountNumber": "564532349898ES"
+    }
+  ],
+  "wallets": [
+    {
+      "id": "w001",
+      "userId": "b001",
+      "coins": [
+        {
+          "id": "c001",
+          "name": "Bitcoin",
+          "hedgeFundInvestment": "5000",
+          "bonificat": "26000",
+          "hedgeProtectionInsurance": "0",
+          "optQuantity": "0",
+          "strikePrice": "0",
+          "expirationDate": "2024-09-19",
+          "earnings": "0"
+        },
+        {
+          "id": "c002",
+          "name": "Ethereum",
+          "hedgeFundInvestment": "25000",
+          "bonificat": "0",
+          "hedgeProtectionInsurance": "0",
+          "optQuantity": "0",
+          "strikePrice": "0",
+          "expirationDate": "2024-09-17",
+          "earnings": "0"
+        },
+        {
+          "id": "c003",
+          "name": "Gold",
+          "hedgeFundInvestment": "13000",
+          "bonificat": "0",
+          "hedgeProtectionInsurance": "0",
+          "optQuantity": "0",
+          "strikePrice": "0",
+          "expirationDate": "2024-10-25",
+          "earnings": "0"
+        },
+        {
+          "id": "c004",
+          "name": "Binance",
+          "hedgeFundInvestment": "25000",
+          "bonificat": "0",
+          "hedgeProtectionInsurance": "0",
+          "optQuantity": "0",
+          "strikePrice": "0",
+          "expirationDate": "2024-09-26",
+          "earnings": "0"
+        }
+      ]
+    },
+    {
+      "id": "w002",
+      "userId": "b002",
+      "coins": [
+        {
+          "id": "c001",
+          "name": "Bitcoin",
+          "hedgeFundInvestment": 120000,
+          "bonificat": 6000,
+          "hedgeProtectionInsurance": 2500,
+          "optQuantity": 12,
+          "strikePrice": 26000,
+          "expirationDate": "2024-12-31T00:00:00Z",
+          "earnings": 35000
+        },
+        {
+          "id": "c002",
+          "name": "Ethereum",
+          "hedgeFundInvestment": 55000,
+          "bonificat": 2800,
+          "hedgeProtectionInsurance": 1200,
+          "optQuantity": 22,
+          "strikePrice": 1600,
+          "expirationDate": "2024-11-30T00:00:00Z",
+          "earnings": 18000
+        },
+        {
+          "id": "c003",
+          "name": "Gold",
+          "hedgeFundInvestment": 40000,
+          "bonificat": 1800,
+          "hedgeProtectionInsurance": 900,
+          "optQuantity": 18,
+          "strikePrice": 1900,
+          "expirationDate": "2024-10-31T00:00:00Z",
+          "earnings": 12000
+        },
+        {
+          "id": "c004",
+          "name": "Binance",
+          "hedgeFundInvestment": 25000,
+          "bonificat": 1200,
+          "hedgeProtectionInsurance": 600,
+          "optQuantity": 35,
+          "strikePrice": 420,
+          "expirationDate": "2024-09-30T00:00:00Z",
+          "earnings": 9000
+        }
+      ]
+    },
+    {
+      "id": "w003",
+      "userId": "b003",
+      "coins": [
+        {
+          "id": "c001",
+          "name": "Bitcoin",
+          "hedgeFundInvestment": 150000,
+          "bonificat": 7500,
+          "hedgeProtectionInsurance": 3000,
+          "optQuantity": 15,
+          "strikePrice": 28000,
+          "expirationDate": "2024-12-31T00:00:00Z",
+          "earnings": 40000
+        },
+        {
+          "id": "c002",
+          "name": "Ethereum",
+          "hedgeFundInvestment": 60000,
+          "bonificat": 3000,
+          "hedgeProtectionInsurance": 1500,
+          "optQuantity": 25,
+          "strikePrice": 1700,
+          "expirationDate": "2024-11-30T00:00:00Z",
+          "earnings": 20000
+        },
+        {
+          "id": "c003",
+          "name": "Gold",
+          "hedgeFundInvestment": 50000,
+          "bonificat": 2000,
+          "hedgeProtectionInsurance": 1000,
+          "optQuantity": 20,
+          "strikePrice": 2000,
+          "expirationDate": "2024-10-31T00:00:00Z",
+          "earnings": 15000
+        },
+        {
+          "id": "c004",
+          "name": "Binance",
+          "hedgeFundInvestment": 30000,
+          "bonificat": 1500,
+          "hedgeProtectionInsurance": 800,
+          "optQuantity": 40,
+          "strikePrice": 450,
+          "expirationDate": "2024-09-30T00:00:00Z",
+          "earnings": 10000
+        }
+      ]
+    },
+    {
+      "id": "w004",
+      "userId": "b004",
+      "coins": [
+        {
+          "id": "c001",
+          "name": "Bitcoin",
+          "hedgeFundInvestment": 180000,
+          "bonificat": 9000,
+          "hedgeProtectionInsurance": 3500,
+          "optQuantity": 18,
+          "strikePrice": 30000,
+          "expirationDate": "2024-12-31T00:00:00Z",
+          "earnings": 50000
+        },
+        {
+          "id": "c002",
+          "name": "Ethereum",
+          "hedgeFundInvestment": 70000,
+          "bonificat": 3500,
+          "hedgeProtectionInsurance": 2000,
+          "optQuantity": 30,
+          "strikePrice": 1800,
+          "expirationDate": "2024-11-30T00:00:00Z",
+          "earnings": 25000
+        },
+        {
+          "id": "c003",
+          "name": "Gold",
+          "hedgeFundInvestment": 60000,
+          "bonificat": 2500,
+          "hedgeProtectionInsurance": 1200,
+          "optQuantity": 25,
+          "strikePrice": 2100,
+          "expirationDate": "2024-10-31T00:00:00Z",
+          "earnings": 20000
+        },
+        {
+          "id": "c004",
+          "name": "Binance",
+          "hedgeFundInvestment": 35000,
+          "bonificat": 1800,
+          "hedgeProtectionInsurance": 900,
+          "optQuantity": 50,
+          "strikePrice": 480,
+          "expirationDate": "2024-09-30T00:00:00Z",
+          "earnings": 12000
+        }
+      ]
+    },
+    {
+      "id": "w007",
+      "userId": "b00997",
+      "coins": [
+        {
+          "id": "c001",
+          "name": "Bitcoin",
+          "hedgeFundInvestment": 20000,
+          "bonificat": 1000,
+          "hedgeProtectionInsurance": 400,
+          "optQuantity": 2,
+          "strikePrice": 22000,
+          "expirationDate": "2024-12-31T00:00:00Z",
+          "earnings": 6000
+        },
+        {
+          "id": "c002",
+          "name": "Ethereum",
+          "hedgeFundInvestment": 10000,
+          "bonificat": 500,
+          "hedgeProtectionInsurance": 200,
+          "optQuantity": 5,
+          "strikePrice": 1300,
+          "expirationDate": "2024-11-30T00:00:00Z",
+          "earnings": 4000
+        },
+        {
+          "id": "c003",
+          "name": "Gold",
+          "hedgeFundInvestment": 8000,
+          "bonificat": 400,
+          "hedgeProtectionInsurance": 150,
+          "optQuantity": 3,
+          "strikePrice": 1700,
+          "expirationDate": "2024-10-31T00:00:00Z",
+          "earnings": 3000
+        },
+        {
+          "id": "c004",
+          "name": "Binance",
+          "hedgeFundInvestment": 5000,
+          "bonificat": 250,
+          "hedgeProtectionInsurance": 100,
+          "optQuantity": 7,
+          "strikePrice": 350,
+          "expirationDate": "2024-09-30T00:00:00Z",
+          "earnings": 2000
+        }
+      ]
+    },
+    {
+      "id": "w000",
+      "userId": "b00740",
+      "coins": [
+        {
+          "id": "c001",
+          "name": "Bitcoin",
+          "hedgeFundInvestment": 0,
+          "bonificat": 0,
+          "hedgeProtectionInsurance": 0,
+          "optQuantity": 0,
+          "strikePrice": 0,
+          "expirationDate": "",
+          "earnings": 0
+        },
+        {
+          "id": "c002",
+          "name": "Ethereum",
+          "hedgeFundInvestment": 0,
+          "bonificat": 0,
+          "hedgeProtectionInsurance": 0,
+          "optQuantity": 0,
+          "strikePrice": 0,
+          "expirationDate": "",
+          "earnings": 0
+        },
+        {
+          "id": "c003",
+          "name": "Gold",
+          "hedgeFundInvestment": 0,
+          "bonificat": 0,
+          "hedgeProtectionInsurance": 0,
+          "optQuantity": 0,
+          "strikePrice": 0,
+          "expirationDate": "",
+          "earnings": 0
+        },
+        {
+          "id": "c004",
+          "name": "Binance",
+          "hedgeFundInvestment": 0,
+          "bonificat": 0,
+          "hedgeProtectionInsurance": 0,
+          "optQuantity": 0,
+          "strikePrice": 0,
+          "expirationDate": "",
+          "earnings": 0
+        }
+      ]
+    },
+    {
+      "id": "w005",
+      "userId": "b00895",
+      "coins": [
+        {
+          "id": "c001",
+          "name": "Bitcoin",
+          "hedgeFundInvestment": 0,
+          "bonificat": 0,
+          "hedgeProtectionInsurance": 0,
+          "optQuantity": 0,
+          "strikePrice": 0,
+          "expirationDate": "",
+          "earnings": 0
+        },
+        {
+          "id": "c002",
+          "name": "Ethereum",
+          "hedgeFundInvestment": 0,
+          "bonificat": 0,
+          "hedgeProtectionInsurance": 0,
+          "optQuantity": 0,
+          "strikePrice": 0,
+          "expirationDate": "",
+          "earnings": 0
+        },
+        {
+          "id": "c003",
+          "name": "Gold",
+          "hedgeFundInvestment": 0,
+          "bonificat": 0,
+          "hedgeProtectionInsurance": 0,
+          "optQuantity": 0,
+          "strikePrice": 0,
+          "expirationDate": "",
+          "earnings": 0
+        },
+        {
+          "id": "c004",
+          "name": "Binance",
+          "hedgeFundInvestment": 0,
+          "bonificat": 0,
+          "hedgeProtectionInsurance": 0,
+          "optQuantity": 0,
+          "strikePrice": 0,
+          "expirationDate": "",
+          "earnings": 0
+        }
+      ]
+    },
+    {
+      "id": "w002",
+      "userId": "b00602",
+      "coins": [
+        {
+          "id": "c001",
+          "name": "Bitcoin",
+          "hedgeFundInvestment": 0,
+          "bonificat": 0,
+          "hedgeProtectionInsurance": 0,
+          "optQuantity": 0,
+          "strikePrice": 0,
+          "expirationDate": "",
+          "earnings": 0
+        },
+        {
+          "id": "c002",
+          "name": "Ethereum",
+          "hedgeFundInvestment": 0,
+          "bonificat": 0,
+          "hedgeProtectionInsurance": 0,
+          "optQuantity": 0,
+          "strikePrice": 0,
+          "expirationDate": "",
+          "earnings": 0
+        },
+        {
+          "id": "c003",
+          "name": "Gold",
+          "hedgeFundInvestment": 0,
+          "bonificat": 0,
+          "hedgeProtectionInsurance": 0,
+          "optQuantity": 0,
+          "strikePrice": 0,
+          "expirationDate": "",
+          "earnings": 0
+        },
+        {
+          "id": "c004",
+          "name": "Binance",
+          "hedgeFundInvestment": 0,
+          "bonificat": 0,
+          "hedgeProtectionInsurance": 0,
+          "optQuantity": 0,
+          "strikePrice": 0,
+          "expirationDate": "",
+          "earnings": 0
+        }
+      ]
+    }
+  ],
+  "coins": [
+    {
+      "id": "c001",
+      "name": "Bitcoin",
+      "symbol": "BTC",
+      "price": 27000,
+      "marketCap": 500000000,
+      "volume": 20000000
+    },
+    {
+      "id": "c002",
+      "name": "Ethereum",
+      "symbol": "ETH",
+      "price": 1700,
+      "marketCap": 300000000,
+      "volume": 15000000
+    },
+    {
+      "id": "c003",
+      "name": "Gold",
+      "symbol": "XAU",
+      "price": 1900,
+      "marketCap": 100000000,
+      "volume": 5000000
+    },
+    {
+      "id": "c004",
+      "name": "Binance",
+      "symbol": "BNB",
+      "price": 350,
+      "marketCap": 80000000,
+      "volume": 3000000
+    }
+  ],
+  "transactions": [
+    {
+      "id": "t001",
+      "walletId": "w001",
+      "coinId": "c001",
+      "amount": 5000,
+      "date": "2024-09-01T12:00:00Z",
+      "type": "buy"
+    },
+    {
+      "id": "t002",
+      "walletId": "w002",
+      "coinId": "c002",
+      "amount": 1000,
+      "date": "2024-09-01T13:00:00Z",
+      "type": "sell"
+    },
+    {
+      "id": "t003",
+      "walletId": "w003",
+      "coinId": "c003",
+      "amount": 1500,
+      "date": "2024-09-01T14:00:00Z",
+      "type": "buy"
+    },
+    {
+      "id": "t004",
+      "walletId": "w004",
+      "coinId": "c004",
+      "amount": 2000,
+      "date": "2024-09-01T15:00:00Z",
+      "type": "sell"
+    },
+    {
+      "id": "t0099",
+      "walletId": "w007",
+      "coinId": "c001",
+      "amount": 500,
+      "date": "2024-09-01T16:00:00Z",
+      "type": "buy"
+    }
+  ]
+}

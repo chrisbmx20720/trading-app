@@ -1,0 +1,39 @@
+<div class="container align-center d-flex justify-center">
+  <div class="wrapper d-flex align-items-center justify-content-center h-100">
+    <div class="card login-form">
+      <div class="card-body">
+        <h2 class="card-title text-center mb-4">Login Form</h2>
+        <form (ngSubmit)="onLogin()" class="needs-validation" novalidate>
+          <div class="mb-3">
+        
+            <input
+              type="text"
+              id="username"
+              [(ngModel)]="username"
+              name="username"
+              class="form-control"
+              placeholder="Username or Email"
+              required
+            />
+          </div>
+          <div class="mb-3">
+          
+            <input
+              type="password"
+              id="password"
+              [(ngModel)]="password"
+              name="Password"
+              class="form-control"
+              required
+              placeholder="password"
+            />
+          </div>
+          <button type="submit" class="btn btn-dark w-100">Log In</button>
+          <div class="sign-up mt-4">
+            Don't have an account? <a routerLink="/register">Create One</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

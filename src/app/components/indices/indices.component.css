@@ -1,0 +1,50 @@
+.indices-slider {
+    display: flex;
+    overflow-x: hidden;
+    white-space: nowrap;
+    padding: 20px 5px;
+    width: 97%;
+
+  }
+  .indices-container{
+    display: flex;
+    align-items:center;
+  }
+  .indices-container p{
+    height: 22px;
+    margin-bottom: 0px;
+  }
+
+
+  .swiper-slide {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin: 0 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    flex: 0 0 auto;
+  }
+  
+  .swiper-slide h4 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .swiper-slide .value {
+    font-size: 16px;
+    margin-right: 10px;
+  }
+  
+  .swiper-slide .change {
+    font-size: 14px;
+    color: green; /* Cambia a rojo si el cambio es negativo */
+  }
+  
+  .swiper-slide .change-icon {
+    margin-left: 5px;
+  }
+  

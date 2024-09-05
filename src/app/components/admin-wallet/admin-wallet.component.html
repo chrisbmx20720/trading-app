@@ -1,0 +1,52 @@
+<div *ngIf="wallet" class="container-fluid">
+  <!-- Row with title on the left and update button on the right -->
+  <div class="row align-items-center mb-4">
+    <div class="col-md-6 col-12">
+      <h2 class="text-light">Wallet {{ wallet.id }}</h2>
+    </div>
+    <div class="col-md-6 col-12 text-md-end text-center">
+      <button class="btn btn-dark" (click)="updateWallet()">Update Wallet</button>
+    </div>
+  </div>
+
+  <!-- Row for coin information -->
+  <div class="row">
+    <div *ngFor="let coin of wallet.coins" class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title">{{ coin.name }}</h5>
+          <form>
+            <div class="form-group">
+              <label for="hedgeFundInvestment">Hedge Fund Investment</label>
+              <input type="text" class="form-control" [(ngModel)]="coin.hedgeFundInvestment" name="hedgeFundInvestment" />
+            </div>
+            <div class="form-group">
+              <label for="bonificat">Bonificat</label>
+              <input type="text" class="form-control" [(ngModel)]="coin.bonificat" name="bonificat" />
+            </div>
+            <div class="form-group">
+              <label for="hedgeProtectionInsurance">Hedge Protection Insurance</label>
+              <input type="text" class="form-control" [(ngModel)]="coin.hedgeProtectionInsurance" name="hedgeProtectionInsurance" />
+            </div>
+            <div class="form-group">
+              <label for="optQuantity">Opt Quantity</label>
+              <input type="text" class="form-control" [(ngModel)]="coin.optQuantity" name="optQuantity" />
+            </div>
+            <div class="form-group">
+              <label for="strikePrice">Strike Price</label>
+              <input type="text" class="form-control" [(ngModel)]="coin.strikePrice" name="strikePrice" />
+            </div>
+            <div class="form-group">
+              <label for="expirationDate">Expiration Date</label>
+              <input type="date" class="form-control" [(ngModel)]="coin.expirationDate" name="expirationDate" />
+            </div>
+            <div class="form-group">
+              <label for="earnings">Earnings</label>
+              <input type="text" class="form-control" [(ngModel)]="coin.earnings" name="earnings" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

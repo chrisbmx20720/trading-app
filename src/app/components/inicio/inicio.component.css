@@ -1,0 +1,68 @@
+.user-dashboard {
+  padding: 20px;
+  width: auto;
+}
+
+.card {
+  margin-bottom: 20px;
+}
+
+.card-body {
+  display: flex;
+  align-items: center;
+  padding: 15px; /* Espacio dentro de la tarjeta */
+  background-color: #fff;
+  border-radius: 5px; /* Bordes redondeados */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra para un efecto 3D */
+}
+
+.card-body i {
+  font-size: 4rem; /* Tamaño grande del icono */
+  margin-right: 20px; /* Espacio entre el icono y la información */
+}
+
+.coin-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title {
+  font-size: 1.25rem; /* Tamaño del texto del título */
+  margin-bottom: 0.5rem; /* Espacio debajo del título */
+}
+
+.card-text {
+  font-size: 1rem; /* Tamaño del texto del contenido */
+}
+
+.chart-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.chart {
+  width: 100%;
+  height: 300px; /* Ajusta según el tamaño del gráfico */
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card:nth-child(1) {
+  background-color: #FFF8E1; /* Fondo amarillo suave para Bitcoin */
+}
+
+.card:nth-of-type(2) .card-body {
+  background-color: #E8F5E9; /* Fondo verde suave para Ethereum */
+}
+
+.card:nth-of-type(3) .card-body {
+  background-color: #FFF3E0; /* Fondo naranja suave para Gold */
+}
+
+.card:nth-of-type(4) .card-body {
+  background-color: #E3F2FD; /* Fondo azul suave para Ripple */
+}

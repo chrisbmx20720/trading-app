@@ -1,0 +1,32 @@
+<div class="users-container p-4">
+    <h2 class="text-light">Users List</h2>
+    <table class="table table-bordered">
+      <thead> 
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Country</th>
+          <th>Province</th>
+          <th>Phone</th>
+          <th>Account Type</th>
+          <th>Account Number</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{ user.name }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.country }}</td>
+          <td>{{ user.province }}</td>
+          <td>{{ user.phone }}</td>
+          <td>{{ user.accountType }}</td>
+          <td>{{ user.accountNumber }}</td>
+          <td>
+            <button (click)="viewWallet(user.walletId)" class="btn btn-success">View Wallet</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

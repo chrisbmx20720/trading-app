@@ -22,4 +22,6 @@ export class UserComponent implements OnInit {
   viewWallet(walletId: string): void {
    this.router.navigate(['/adminwallet', walletId]);
   }
+
+  
 }

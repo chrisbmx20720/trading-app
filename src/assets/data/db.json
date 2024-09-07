@@ -147,6 +147,20 @@
       "phone": "+1789456",
       "accountTypeId": "a002",
       "accountNumber": "564532349898ES"
+    },
+    {
+      "id": "b00520",
+      "username": "fvillalobos",
+      "lastname": "Villalobos",
+      "name": "Fracisco",
+      "email": "f@gmail",
+      "password": "010101",
+      "walletId": "w000",
+      "country": "USA",
+      "province": "Detroit",
+      "phone": "+1 4889 5555",
+      "accountTypeId": "a000",
+      "accountNumber": "564532349818ES"
     }
   ],
   "wallets": [
@@ -190,13 +204,13 @@
         {
           "id": "c004",
           "name": "Binance",
-          "hedgeFundInvestment": "25000",
+          "hedgeFundInvestment": "30000",
           "bonificat": "0",
           "hedgeProtectionInsurance": "0",
           "optQuantity": "0",
           "strikePrice": "0",
-          "expirationDate": "2024-09-26",
-          "earnings": "0"
+          "expirationDate": "2024-10-30",
+          "earnings": "45000"
         }
       ]
     },
@@ -407,46 +421,46 @@
         {
           "id": "c001",
           "name": "Bitcoin",
-          "hedgeFundInvestment": 0,
+          "hedgeFundInvestment": "45000",
           "bonificat": 0,
           "hedgeProtectionInsurance": 0,
           "optQuantity": 0,
           "strikePrice": 0,
-          "expirationDate": "",
-          "earnings": 0
+          "expirationDate": "2024-12-06",
+          "earnings": "100"
         },
         {
           "id": "c002",
           "name": "Ethereum",
-          "hedgeFundInvestment": 0,
+          "hedgeFundInvestment": "28000",
           "bonificat": 0,
           "hedgeProtectionInsurance": 0,
           "optQuantity": 0,
           "strikePrice": 0,
-          "expirationDate": "",
-          "earnings": 0
+          "expirationDate": "2024-12-06",
+          "earnings": "100"
         },
         {
           "id": "c003",
           "name": "Gold",
-          "hedgeFundInvestment": 0,
+          "hedgeFundInvestment": "23000",
           "bonificat": 0,
           "hedgeProtectionInsurance": 0,
           "optQuantity": 0,
           "strikePrice": 0,
-          "expirationDate": "",
-          "earnings": 0
+          "expirationDate": "2024-12-06",
+          "earnings": "100"
         },
         {
           "id": "c004",
           "name": "Binance",
-          "hedgeFundInvestment": 0,
+          "hedgeFundInvestment": "5000",
           "bonificat": 0,
           "hedgeProtectionInsurance": 0,
           "optQuantity": 0,
           "strikePrice": 0,
-          "expirationDate": "",
-          "earnings": 0
+          "expirationDate": "2024-12-06",
+          "earnings": "100"
         }
       ]
     },
@@ -503,6 +517,56 @@
     {
       "id": "w002",
       "userId": "b00602",
+      "coins": [
+        {
+          "id": "c001",
+          "name": "Bitcoin",
+          "hedgeFundInvestment": 0,
+          "bonificat": 0,
+          "hedgeProtectionInsurance": 0,
+          "optQuantity": 0,
+          "strikePrice": 0,
+          "expirationDate": "",
+          "earnings": 0
+        },
+        {
+          "id": "c002",
+          "name": "Ethereum",
+          "hedgeFundInvestment": 0,
+          "bonificat": 0,
+          "hedgeProtectionInsurance": 0,
+          "optQuantity": 0,
+          "strikePrice": 0,
+          "expirationDate": "",
+          "earnings": 0
+        },
+        {
+          "id": "c003",
+          "name": "Gold",
+          "hedgeFundInvestment": 0,
+          "bonificat": 0,
+          "hedgeProtectionInsurance": 0,
+          "optQuantity": 0,
+          "strikePrice": 0,
+          "expirationDate": "",
+          "earnings": 0
+        },
+        {
+          "id": "c004",
+          "name": "Binance",
+          "hedgeFundInvestment": 0,
+          "bonificat": 0,
+          "hedgeProtectionInsurance": 0,
+          "optQuantity": 0,
+          "strikePrice": 0,
+          "expirationDate": "",
+          "earnings": 0
+        }
+      ]
+    },
+    {
+      "id": "w000",
+      "userId": "b00520",
       "coins": [
         {
           "id": "c001",

@@ -13,7 +13,6 @@ import { AdminWalletComponent } from './components/admin-wallet/admin-wallet.com
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'indices', component: IndicesComponent },
-  { path: 'register', component: RegisterComponent },
   { path: 'adminwallet/:id', component: AdminWalletComponent }, // Ruta para adminwallet con parámetro ID
   { path: 'dashboard', component: DashboardComponent, 
     children: [ 
@@ -26,6 +25,7 @@ const routes: Routes = [
   { path: 'admin', component: AdminComponent,
     children: [
       { path: 'user', component: UserComponent },
+      { path: 'register', component: RegisterComponent },
       { path: 'users', component: UserComponent },
       { path: '', redirectTo: 'user', pathMatch: 'full' }
     ]

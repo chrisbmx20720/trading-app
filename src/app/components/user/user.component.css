@@ -2,6 +2,10 @@
   display: flex;
 }
 
+.users-container{
+  padding: 40px;
+}
+
 .sidebar {
   width: 250px;
   background-color: #343a40;
